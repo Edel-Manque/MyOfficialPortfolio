@@ -137,7 +137,7 @@
     color: var(--black-color);
     text-shadow: 2px 2px 15px var(--platinum-color);
     overflow: hidden;
-    
+    margin-top: 50px;
 }
 
 .roles span{
@@ -150,29 +150,32 @@
 @keyframes animation{
     0%,
     100% {
-        top: 0;
+        top: -22px;
     }
-    20% {
-        top: 0;
+    15% {
+        top: -22px;
     }
-    25% {
-        top: -100px;
+    30% {
+        top: -125px;
     }
-    45%{
-     top: -100px;   
+    50%{
+     top: -125px;   
     }
-    50% {
-        top: -200px;
-    }
-    70% {
-        top: -200px;
+    60% {
+        top: -224px;
     }
     75% {
-        top: -300px;
+        top: -224px;
     }
-    95% {
-        top: -300px;
+    80% {
+        top: -324x;
     }
+    90% {
+        top: -324px;
+    }95%{
+        top: -324px ;
+    }
+    
     
    
     
@@ -706,14 +709,20 @@ footer{
     
 }
 
+.roles {
+    margin-top: 0px;
+}
+
 .text-Container h2{
     font-size: 24px;
 }
 .roles{
     letter-spacing: 3px;
     font-size: 20px;
+    text-align: center;
     overflow: hidden;
-    
+    height: 50px;
+
 }
 
 
@@ -820,6 +829,7 @@ footer{
     grid-template-columns:150px 150px;
     grid-auto-rows: auto;
     grid-gap: 10px;
+    overflow: hidden;
     
 }
 .Technical .card{
