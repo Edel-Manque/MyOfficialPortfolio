@@ -680,7 +680,7 @@ footer{
 
 /*MEDIA MOBILE VIEW*/
 
-@media screen  and (max-width:600px){
+@media screen  and (max-width:800px){
 
 .header{
     display: none;
@@ -782,9 +782,15 @@ footer{
    
 }
 
+.content .btn-holder{
+    display:flex;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
 .btn-download{
     margin: 0;
-    margin-left: 27%;
     margin-top: 60px;
 }
 
