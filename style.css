@@ -229,9 +229,17 @@ padding-right: 10rem;
 .content{
     margin-right: 100px;
     padding-top: 5px;
-    width:800px
+    width:800px;
     
     
+    
+}
+
+.content .btn-holder{
+    display: flex;
+    
+    justify-content: center;
+    align-content: center;
 }
 .content h2{
     font-size: 50px;
@@ -270,17 +278,18 @@ padding-right: 10rem;
 .btn-download{
     width: 180px;
     padding: 10px;
+    margin-bottom: 20px;
     border-radius: 30px;
     text-align: center;
     background-color: var(--white-color);
     position: relative;
-    margin-top: 40px;
     font-size: 16px;
     font-family: var(--body-fonts);
     font-weight: 600;
     color: var(--white-color);
-    background-color: var(--blue-color);
+    background-color: var(--black-color);
     border: 2px solid var(--platinum-color);
+    margin-top: 40px;
 }
 
 .btn-download:hover {
@@ -680,7 +689,7 @@ footer{
 
 /*MEDIA MOBILE VIEW*/
 
-@media screen  and (max-width:800px){
+@media screen  and (max-width:800px) {
 
 .header{
     display: none;
@@ -782,16 +791,9 @@ footer{
    
 }
 
-.content .btn-holder{
-    display:flex;
-     display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-}
 .btn-download{
     margin: 0;
-   
+    
 }
 
 .skills-Container{
@@ -1007,4 +1009,62 @@ footer{
 
 
 }
+
+.about-container{
+    height: 110vh;
+}
+.btn-holder{
+    margin-top: 20px;
+
+}
+}
+
+
+@media screen  and (max-width:320px){
+
+    .home-Container{height: 110vh;}
+    .col-container{height: 120vh;}
+    .content p{
+        font-size: 10px;
+        margin-top: 0px;
+       
+    }
+    .about-container{
+        height: 130vh;
+    }
+    .btn-holder{margin-top: 0;}
+    .Skills{
+        height: 210vh;
+        background-color: var(--white-color);
+        
+    }
+    .Technical{
+        height: 130vh;
+    }
+    .skills-Container{height: 200vh;
+    overflow:hidden;}
+    .page-container{height: 200vh;}
+    .Softskills{margin-top: 20px;}
+    .column-holder{
+        
+        height: 78vh;
+        padding-top: 30px;
+        background-color: var(--white-color);
+        margin-top: 20px;
+    }
+    .contact-container{
+        height: 120vh;
+        display: grid;
+       
+    }
+    .Contact{height: 120vh;
+    }
+
+    .input-group{
+        height: 100vh;
+       
+    }
+
+    footer{overflow: hidden;}
+   
 }
