@@ -72,14 +72,14 @@
     font-weight:300;
     letter-spacing: 3px;
     color: var(--black-color);
-    
+    border-radius: 20px;
 }
 
 .navlist ul li a:hover{
     transition: 0.4s ease-in-out;
     color: var(--platinum-color);
     background-color: var(--black-color);
-    border-radius: 20px;
+
     
     
 }
@@ -103,6 +103,9 @@
     font-family:Georgia, 'Times New Roman', Times, serif;  
 }
 
+.btn-holder a {
+text-decoration: none;
+}
 .text-Container h1{
     font-family:var(--head-fonts);
     font-size: 150px;
@@ -298,14 +301,14 @@ padding-right: 10rem;
 .btn-download:hover {
     color: var(--blue-color);
     background-color: var(--platinum-color);
-    border: 1px solid var(--platinum-color);
+    border: 2px solid var(--platinum-color);
     transition: 0.2s ease-in-out;
     cursor: pointer;
 }
 
 .skills-Container{
     background-color: var(--white-color);
-    height:100vh;
+    height:120vh;
     width: 100%;
    
 }
@@ -326,7 +329,7 @@ padding-right: 10rem;
 
 .skills-Container h4{
     font-size: 21px;
-    color: var(--orange-color);
+    color: var(--black-color);
    text-align: center;
    letter-spacing: 1px;
    font-weight: 700;
@@ -349,6 +352,7 @@ padding-right: 10rem;
     margin-top: 20px;
     margin-left: 20rem;
     margin-right: 20rem;
+    margin-bottom: 20px;
  
 
    
@@ -358,7 +362,7 @@ background-color: var(--white-color);
 width: 250px;
 height: 150px;
 text-align: center;
-box-shadow:1px 1px 5px 1px var(--platinum-color);
+
 border-radius: 5px;
 transition: 0.1s ease-in-out;
 overflow: hidden;
@@ -380,9 +384,43 @@ overflow: hidden;
   
 }
 
+.familiarity{
+text-align: center;
+list-style-type: none;
+}
+.familiarity ul {
+    display: flex;
+    justify-content: center;
+}
+
+.familiarity ul li {
+    
+    list-style-type: none;
+    font-size: 20px;
+    font-family: var(--body-fonts);
+    font-weight: 500;
+    color: var(--blue-color);
+    letter-spacing:2px;
+    padding: 30px;
+}
+
+.page-container .familiarity{
+    margin-left: 170px;
+    margin-right:170px;
+    height: 130px;
+    background-color: var(--platinum-color);
+    
+}
+
 .Technical .card:hover {
 
-    border: 1px solid var(--light-gray);
+    border: 1px solid var(--blue-color);
+    
+}
+
+.Technical .card:hover h2 {
+
+    color:var(--blue-color);
 }
 .Technical .card img{
     transition: 0.3s ease;
@@ -394,8 +432,16 @@ overflow: hidden;
     
 }
 
+.familiarity h3{
+    font-family: var(--body-fonts);
+    font-size:14px ;
+    font-weight: 500;
+    color: var(--black-color);
+    padding:10px;
+}
+
 .card h2{
-    color: var(--blue-color);
+    color: var(--black-color);
     font-family: var(--body-fonts);
     font-size: 13px;
     font-weight: 500;
@@ -589,6 +635,35 @@ font-weight: 300;
 color: var(--black-color);
 padding-top: 10px;
 }
+.contact-container  .callmebtn{
+    height: 40px;
+    width: 120px;
+    background-color:var(--orange-color);
+    margin-top: 50px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 7px;
+    border-radius: 5px;
+}
+
+.contact-container  .callmebtn a{
+    text-decoration: none;
+   text-align: center;
+   font-size: 16px;
+   color: var(--white-color);
+  
+   
+} 
+
+
+.btncallmeholder 
+{   width: 100%;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
 
 .contact-container h3{
     text-align: center;
@@ -708,7 +783,9 @@ footer{
     
     
 }
-
+.page-container .Softskills{
+    margin-top: 20px;
+}
 .roles {
     margin-top: 0px;
 }
@@ -784,8 +861,9 @@ footer{
 .content h2{
     font-size: 30px;
   padding: 0;
-  margin: 0;
+  margin-top: 20px;
   text-align: center;
+  margin-bottom:-20px;
     
 }
 .content p {
@@ -807,6 +885,7 @@ footer{
 
 .skills-Container{
     height: 170vh;
+    overflow: hidden;
 }
 .skills-Container h1{
     text-align: center;
@@ -818,6 +897,7 @@ footer{
     margin-right:5px ;
     
 }
+
 
 .page-container h4{
     margin: 10px;
@@ -852,7 +932,7 @@ footer{
 
 .Technical .card.card:hover{
    
-    border: 1px solid var(--light-gray);
+    border: 1px solid var(--orange-color);
     
 }
 
@@ -875,6 +955,24 @@ footer{
     letter-spacing: 1px;
     text-align: center;
     padding: 2px;
+}
+.familiarity{
+
+    height: 150px;
+}
+
+.page-container .familiarity{
+    margin: 0;
+   
+}
+.familiarity ul{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.familiarity ul li {
+
+    font-size: 12px;
+    padding: 5px;
 }
 
 .scroller {
@@ -912,6 +1010,32 @@ footer{
     animation-play-state: paused;
 }
 
+.contact-container  .callmebtn{
+    height: 40px;
+    width: 120px;
+    background-color:var(--orange-color);
+    margin-top: 50px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 7px;
+    border-radius: 5px;
+}
+
+.contact-container  .callmebtn a{
+    text-decoration: none;
+   text-align: center;
+   font-size: 16px;
+   color: var(--white-color);
+  
+   
+}
+.btncallmeholder 
+{   width: 100%;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    
+}
 .contact-left-title h1 {
     padding-top: 4rem;
     font-size:40px;
@@ -933,6 +1057,8 @@ footer{
 
 .contact-container{
     height: 130vh;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -1044,17 +1170,18 @@ footer{
     }
     .btn-holder{margin-top: 0;}
     .Skills{
-        height: 210vh;
+        height: 250vh;
         background-color: var(--white-color);
         
     }
     .Technical{
         height: 130vh;
     }
-    .skills-Container{height: 200vh;
+    .skills-Container{height: 250vh;
     overflow:hidden;}
     .page-container{height: 200vh;}
-    .Softskills{margin-top: 20px;}
+    .Softskills{margin-top: 0px;
+    }
     .column-holder{
         
         height: 78vh;
@@ -1076,5 +1203,57 @@ footer{
     }
 
     footer{overflow: hidden;}
+
+
+    .Technical .card:hover img {
    
+        transform: scale(1.08);
+        
+       
+     }
+
+     .Technical .card img{
+        margin-left:0;
+        margin-right: 0;
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*For Profile Page*/
+.page-about{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--white-color);
+
+}
+
+.imgholder img{
+    background-color: #e76f51;
+    height: 500px;
+    border-radius: 50%;
+
+}
+
+.page-about{
+    display: flex;
+
+}
+
+.left-col{
+    background-color: var(--blue-color);
+}
+
+.right-col{
+    background-color: var(--orange-color);
+    height: 100vh;
+    width: 100%; 
 }
