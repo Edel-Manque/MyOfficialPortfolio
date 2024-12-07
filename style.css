@@ -111,10 +111,11 @@
     line-height: 90px;
     font-size: 120px;
     font-weight: 900;
-    color: transparent;
+    color:transparent;
     -webkit-text-stroke: 3px var(--red);
     font-family: var(--body);
     position: relative;
+
     
 }
 
@@ -127,6 +128,7 @@
     color: var(--red);
     border-right: 0px solid var(--red);
     transition: 1s ease-in-out;
+   
 }
 
 .homepage h1:hover::before{
@@ -230,6 +232,7 @@ background-color:var(--red);
     line-height: 140px;
     font-weight: 900;
     color: var(--red);
+   
 
    
 }
@@ -354,9 +357,9 @@ width: 500px;
     text-align: center;
     letter-spacing: 2px;
     font-family: var(--title);
-    color: var(--red);
-    font-size: 20px;
-    font-weight: 500;
+    color: var(--gray);
+    font-size: 32px;
+    font-weight:900;
 }
 .about .certPanel{
     height: 320px;
@@ -370,46 +373,78 @@ width: 500px;
     height:280px;
     width: 80vw;
     margin-top: 20px;
-    display: flex;
-    justify-content:space-around;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    align-items: center;
+    place-items:center;
   
    
 }
 
 .certMain .certBox{
     margin-top: 15px;
-    height: 280px;
-    width: 300px;
+    height: 300px;
+    width: 400px;
     box-shadow: 0px 0px 5px var(--gray);
     border: 1px solid var(--lightgray);
+    position: relative;
+    overflow: hidden;
 }
 
-.certBox .imgholder {
-    width: 300px;
-    height: 200px;
-   
+
+
+
+
+.certBox  img {
+    height:300px ;
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+    
 }
 
-.certBox .imgholder img {
-    height:200px ;
-    width: 300px;
+
+  
+.certBox:hover img{
+transform: scale(1.1);
+opacity: 30%;
 }
 
-.certBox .textpanel{
-    padding-left: 15px;
-    padding-top: 10px;
+.textpanel{
+    padding: 0 50px;
+    height: 0;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(transparent,#222222);
+    padding: 0 50px;
+    text-align: center;
+    transition: height 0.3s;
+}
+
+.certBox:hover .textpanel{
+height: 90%;
 }
 .certBox h3 {
-    font-size: 12px;
-    font-weight: 400;
-    font-family: var(--body);
-    color: #222222;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-family: var(--title);
+    margin-top: 55%;
+    color: var(--white);
 }
 
 .certBox h4{
     font-size: 10px;
-    color: var(--gray);
+    color: var(--lightgray);
     font-weight: 400;
+    margin-top: 10px;
 }
 
 .certBox h5{
@@ -423,8 +458,9 @@ width: 500px;
 
 .skills{
    
-    height: 100vh;
+    height: 110vh;
     width: 100vw;
+    
     
 }
 
@@ -456,15 +492,15 @@ width: 500px;
 
 .skills .skillpage .skillspanel{
     height: 65vh;
-    width: 80vw;
+    width: 70vw;
     background-color: var(--pure-white);
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
     align-items: center;
     place-items:center;
-    row-gap: 50px;
-    
+    gap: 20px;
     padding-top: 50px;
+    
     
 }
 
@@ -478,10 +514,11 @@ width: 500px;
 .skillpage  .boxes{
     color:var(--red) ;
     background-color: var(--white);
-    height: 270px;
+    height: 300px;
     width: 400px;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 0px var(--gray);
+    padding-left: 20px;
 }
 
 .skillpage  .boxes:hover{
@@ -521,7 +558,7 @@ i{
 
 
 .boxes .txtpanel{
-    padding-left: 20px;
+ 
     padding-top: 10px;
 }
 
@@ -606,6 +643,140 @@ i{
     }
 }
 
+/*Experiences*/
+
+.experience {
+    height: 130vh;
+    width: 100vw;
+   padding-left: 200px;
+   padding-right: 200px;
+    
+}
+.title h1 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+    font-family: var(--title);
+    color: var(--red);
+}
+
+.experience .expPage{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.experience .expPanel{
+    height: 50vh;
+    
+    display: flex;
+    justify-content: center;
+  
+}
+
+.itPanel{
+    height: 400px;
+    width: 60vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    place-items:center;
+    margin-top:30px;
+    gap: 20px;
+}
+
+.itPanel .itBox{
+    height: 400px;
+    width: 400px;
+    border-radius: 15px ;
+    box-shadow: 0px 0px 5px 0px var(--darkgray);
+    background-color: var(--white);
+    overflow: hidden;
+    
+}
+
+
+.itBox img{
+    height: 300px;
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px 0px var(--gray);
+    transition: 0.3s ease;
+    opacity: 75%;
+}
+.itBox .itTxt{
+    padding-left: 20px;
+}
+
+.itTxt h2{
+    font-family: var(--title);
+    font-size: 20px;
+    font-weight:700;
+    color: var(--gray);
+    margin-top: 20px;
+}
+
+.itTxt h3{
+    font-size: 12px;
+    font-family: var(--body);
+    color: var(--gray);
+
+
+}
+
+.itTxt h4{
+    text-align: end;
+    padding-right: 20px;
+    font-family: var(--body);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--red);
+}
+
+.itBox:hover img{
+    transition: 0.3s ease;
+    transform: scale(1.1);
+    opacity: 100%;
+    
+}
+
+.itBox:hover .itTxt h2 {
+    transition: 0.3s;
+    color: var(--red);
+}
+
+
+.salesPanel{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cardholder{
+    height: 400px;
+    width: 55vw;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    place-items: center;
+}
+
+.cardholder .scard{
+    height: 320px;
+    width: 320px;
+    border-radius: 15px ;
+    box-shadow: 0px 0px 5px 0px var(--darkgray);
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+.scard img{
+    height: 250px;
+    width: 320px;
+    border-radius: 10px;
+}
 
 /*Contact and Footer*/
 
