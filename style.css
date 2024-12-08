@@ -93,6 +93,7 @@
     justify-content: center;
     align-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .homepage .homepanel{
@@ -177,7 +178,7 @@ color: var(--gray);
 
 .about {
     height: 120vh;
-    
+    overflow: hidden;
 }
 
 .aboutpage{
@@ -211,17 +212,26 @@ justify-content: center;
     display: flex;
     justify-content: center;
 }
-.leftpanel .imgholder img{
+.leftpanel .imgholder{
     height: 500px;
     border-radius: 500px;
     background-color: var(--black);
+    overflow: hidden;
+}
+.leftpanel .imgholder img{
+    height: 500px;
+    border-radius: 500px;
+    background-color:transparent;
+    border: 2px solid transparent;
     transition: 0.4s ease-in-out;
 }
 
-.leftpanel .imgholder img:hover{
-transform: scale(1.04);
-transition: 0.4s ease;
-background-color:var(--red);
+.imgholder:hover img{
+    transform: scale(1.1)translateY(3%);
+    
+    
+
+
 }
 
 
@@ -268,6 +278,7 @@ background-color:var(--red);
     margin-top: 5px;
     box-shadow: 0px 0px 2px 0px var(--gray);
     padding-top: 10px;
+    overflow: hidden;
 }
 .leftbotpanel{
     height: 267px;
@@ -352,6 +363,7 @@ width: 500px;
     font-weight: 300;
 }
 
+
 .certification h1{
     margin-top: 10px;
     text-align: center;
@@ -362,10 +374,11 @@ width: 500px;
     font-weight:900;
 }
 .about .certPanel{
-    height: 320px;
+    height: 350px;
     width: 100vw; 
     display: flex;
     justify-content: center;
+    
   
 }
 
@@ -646,11 +659,11 @@ i{
 /*Experiences*/
 
 .experience {
-    height: 130vh;
+    height: 160vh;
     width: 100vw;
    padding-left: 200px;
    padding-right: 200px;
-    
+    overflow: hidden;
 }
 .title h1 {
     text-align: center;
@@ -670,9 +683,9 @@ i{
 
 .experience .expPanel{
     height: 50vh;
-    
     display: flex;
     justify-content: center;
+    margin-top: 40px;
   
 }
 
@@ -756,27 +769,155 @@ i{
 
 .cardholder{
     height: 400px;
-    width: 55vw;
+    width: 80vw;
     margin-top: 10px;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
     place-items: center;
 }
 
 .cardholder .scard{
-    height: 320px;
-    width: 320px;
+    height: 360px;
+    width: 360px;
     border-radius: 15px ;
     box-shadow: 0px 0px 5px 0px var(--darkgray);
     background-color: var(--white);
     overflow: hidden;
+   
 }
 
 .scard img{
     height: 250px;
-    width: 320px;
+    width: 360px;
     border-radius: 10px;
+    transition: 0.3s ease;
+    opacity: 75%;
 }
+.scard h2{
+    font-size: 16px;
+    font-family: var(--title);
+    color: var(--gray);
+}
+
+.scard h3{
+    font-size: 12px;
+    font-family: var(--body);
+    color: var(--gray);
+}
+
+.scard h4{
+    text-align: end;
+    color:var(--red);
+    font-size: 12px;
+    font-family: var(--body);
+}
+.salestxt{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.scard:hover img{
+    transform: scale(1.1);
+    transition: 0.3s;
+    opacity: 100%;
+
+}
+
+.scard:hover h2{
+    color: var(--red);
+}
+
+
+
+/*Automotive*/
+
+
+
+.autoPanel{
+    height: 400px;
+    width: 60vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    place-items:center;
+    margin-top:30px;
+    gap: 20px;
+}
+
+.autoPanel .autoBox{
+    height: 400px;
+    width:400px;
+    border-radius: 15px ;
+    box-shadow: 0px 0px 5px 0px var(--darkgray);
+    background-color: var(--white);
+    overflow: hidden;
+    margin-top: 40px;
+    
+}
+
+.autoholder{
+    height: 300px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px 0px var(--gray);
+    transition: 0.3s ease;
+}
+.autoBox img{
+    height: 250px;
+    width: 250px;
+    transition: 0.3s ease;
+    opacity: 75%;
+}
+.autoBox .autoTxt{
+    padding-left: 20px;
+}
+
+.autoTxt h2{
+    font-family: var(--title);
+    font-size: 20px;
+    font-weight:700;
+    color: var(--gray);
+    margin-top: 20px;
+}
+
+.autoTxt h3{
+    font-size: 12px;
+    font-family: var(--body);
+    color: var(--gray);
+
+
+}
+
+.autoTxt h4{
+    text-align: end;
+    padding-right: 20px;
+    font-family: var(--body);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--red);
+}
+
+.autoBox:hover img{
+    transition: 0.3s ease;
+    transform: scale(1.05);
+    opacity: 100%;
+    
+}
+
+.autoBox:hover .autoholder{
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+.autoBox:hover .autoTxt h2 {
+    transition: 0.3s;
+    color: var(--red);
+}
+
+
 
 /*Contact and Footer*/
 
@@ -1043,3 +1184,226 @@ footer{
   
 }
 
+
+@media (max-width: 480px){
+
+    .header{
+        visibility: hidden;
+    }
+
+    .home{
+        width: 100%;   
+        height: 110vh;
+    }
+
+    .homepage{height: 100vh;}
+  
+   .homepage .homepanel{
+    margin-top:60px;
+   }
+    .homepanel{
+       
+        h1{
+            font-size: 60px;
+        }
+
+        
+    }
+
+    .hometextpanel{
+        padding: 0;
+        width: 90vw;
+        margin: 0;
+    }
+
+
+    .about{
+        height: 300vh;
+        
+    }
+
+    .aboutpage{
+        height: 155vh;
+        display: block;
+    }
+
+    .aboutpanel{
+        display: block;
+        width: 100%;
+        height: 200vh;
+        margin: 0;
+    }
+
+    .aboutpanel .leftpanel{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .leftpanel .imgholder{
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        height: 300px;
+    }
+
+    .leftpanel .imgholder img{
+        height: 300px;
+    }
+    
+
+    .aboutpanel .rightpanel{
+        width: 100%;
+    }
+
+    .aboutpanel .rightpanel h1{
+        font-size: 45px;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .aboutpanel .aboutme{
+        display: block;
+        width: 100%;
+        height: 180px;
+        line-height: 20px;
+    }
+
+    .aboutpanel .aboutme h2{
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .rightpanel .top p {
+        text-align: justify;
+         font-size: 12px;
+         padding: 20px;
+    }
+
+    .aboutpanel .bot {
+        display: block;
+        height: 600px;
+    }
+
+    .aboutpanel .bot h1{
+        font-size: 20px;
+        text-align: start;
+    }
+
+    .aboutpanel .bot .leftbotpanel{
+        width: 100%;
+        height: 200px;
+        
+    }
+
+    .aboutpanel .infoholder{ 
+        width:90vw;
+        padding-left: 30px;
+    }
+
+    .aboutpanel .bot i{
+        margin: 0;
+    }
+
+    .aboutpanel .infoholder i{
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    .aboutpanel .rightbotpanel {
+        width: 100%;
+    }
+
+    .edpanel .lefted i {
+        margin-top: 22px;
+    }
+
+    .edpanel .righted h3{
+        font-size: 8.5px;
+        font-weight: 800;
+        margin-top: 4px;
+    }
+
+    .edpanel .righted h4{
+        font-size: 8px;
+    }
+
+    .certification {
+        height: 130vh;
+        width: 100%;
+        
+    }
+
+    .certification .certPanel{
+        height: 115vh;
+        width: 100%;
+    }
+
+    .certification .certMain {
+        margin: 0;
+        padding: 0;
+        height: 120vh;
+        justify-content: center;
+    }
+
+    
+    .certMain .certBox {
+        width: 360px;
+        height:300px;
+    }
+    .certMain .certBox .imgholder{
+        width: 360px;
+       
+    }
+
+
+
+
+    .skills{
+        width: 100%;
+        height: 400vh;
+    }
+
+    .skills .title{
+        width: 100%;
+
+    }
+
+    .skills .skillpage{
+        width: 100%;
+        height: 270vh;
+        
+    }
+
+    .skills .skillspanel{
+      justify-content: center;
+     
+    }
+
+    .skillspanel .boxes{
+        width: 400px;
+        
+    }
+
+    .skillspanel .boxes .imgholder{
+        width: 100%;
+    }
+
+    .skillspanel .boxes h4{
+        width: 100%;
+        padding-right: 10px;
+    }
+    
+
+    .skills .scroller {
+        margin: 30px;
+    }
+
+    .skills .scroller ul{
+        gap: 20px;
+    }
+}
