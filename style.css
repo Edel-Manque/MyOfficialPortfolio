@@ -1518,5 +1518,14 @@ footer{
     .Contact .contact-container {
         height: 600px;
     }
+    .footerContainer .footerNav ul{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
 
+    .footerContainer .footerNav ul a{
+        font-size: 12px;
+        margin: 0;
+    }
 }
