@@ -263,6 +263,10 @@ justify-content: center;
 
 }
 
+.rightbotpanel .righted img{
+    height: 20px;
+}
+
 .rightpanel .aboutme p{
     font-family: var(--body);
     font-weight: 400;
@@ -295,23 +299,33 @@ justify-content: center;
     color: var(--red);
 }
 
-.leftbotpanel i span{
-    font-family: var(--body);
-    font-weight: 400;
-    padding-left: 20px;
+.leftbotpanel .infoholder span{
+        font-family: var(--body);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        padding-left: 16px;
+    
     
 
 }
 
-
-
-.leftbotpanel i{
-    margin-top: 30px;
-    margin-left: 20px;
+.leftbotpanel i img{
+    height: 20px;
+    margin-top: 23px;
+    margin-left: 25px;
+    
+ 
 }
+
+
 .rightbotpanel{
     height: 267px;
     width: 35vw;  
+}
+
+.rightpanel .top h1{
+margin-top: 15px;
 }
 
 .rightbotpanel h1{
@@ -319,6 +333,7 @@ justify-content: center;
     font-size: 18px;
     margin-left: 30px;
     color: var(--red);
+    margin-bottom: 10px;
 }
 .edpanel{
     display: flex;
@@ -331,38 +346,30 @@ height: 245px;
 
 }
 
-.lefted i{
-    margin-top: 30px;
-   
-}
 
-.righted{
-margin-top: 14px;
-height: 245px;
-width: 500px;
-
-}
 
 
 
 .righted h3{
-    font-size: 14px;
+    font-size: 13px;
     color: var(--darkgray);
     font-family: var(--title);
     padding-left: 20px;
-    padding-top: 11.5px;
-    width: 630px;
+    padding-top: 10px;
+  
+  
     
-    
-   
 }
+
+
 
 .righted h4{
     color:var(--gray);
-    padding-left: 20px;
+    padding-left: 55px;
     font-family: var(--body);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 300;
+    
 }
 
 
@@ -437,7 +444,7 @@ opacity: 30%;
     flex-direction: column;
     left: 0;
     bottom: 0;
-    background: linear-gradient(transparent,#222222);
+    background: linear-gradient(transparent,#000000);
     padding: 0 50px;
     text-align: center;
     transition: height 0.3s;
@@ -1193,6 +1200,29 @@ footer{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 480px){
 
     .header{
@@ -1204,16 +1234,23 @@ footer{
         height: 110vh;
     }
 
-    .homepage{height: 100vh;}
+    .homepage{
+        height: 600px;
+        width: 100%;
+    }
   
    .homepage .homepanel{
     margin-top:60px;
+    width: 100%;
    }
     .homepanel{
        
         h1{
             -webkit-text-stroke: 1.5px var(--red);
-            font-size: 60px;
+            font-size: 65px;
+            text-align: center;
+            line-height: 50px;
+            
         }
 
         
@@ -1221,18 +1258,17 @@ footer{
 
     .hometextpanel{
         padding: 0;
-        width: 90vw;
         margin: 0;
     }
 
 
     .about{
-        height: 2170px;
+        height: 2300px;
         
     }
 
     .aboutpage{
-        height: 1040px;
+        height: 1150px;
         display: block;
     }
 
@@ -1293,14 +1329,17 @@ footer{
          padding: 20px;
     }
 
-    .aboutpanel .bot {
+    .aboutpanel .rightpanel .bot {
         display: block;
-        height: 500px;
+        height: 600px;
     }
 
     .aboutpanel .bot h1{
         font-size: 20px;
         text-align: start;
+        margin-left: 20px;
+        margin-bottom: 0;
+        margin-top: 20px;
     }
 
     .aboutpanel .bot .leftbotpanel{
@@ -1311,14 +1350,15 @@ footer{
 
     .aboutpanel .infoholder{ 
         width:90vw;
-        padding-left: 30px;
+        
+       
     }
 
     .aboutpanel .bot i{
         margin: 0;
     }
 
-    .aboutpanel .infoholder i{
+    .aboutpanel .infoholder i span{
         margin-top: 10px;
         font-size: 13px;
     }
@@ -1326,9 +1366,12 @@ footer{
     .aboutpanel .rightbotpanel {
         width: 100%;
     }
+    .rightpanel .bot{
+      height: 550px;
+    }
 
-    .edpanel .lefted i {
-        margin-top: 22px;
+    .rightpanel .bot .leftbotpanel {
+        height: 250px;
     }
 
     .edpanel .righted h3{
@@ -1453,6 +1496,7 @@ footer{
 
     .expPanel .itBox img{
         width: 360px;
+        opacity: 100%;
     }
 
     .salesPanel {
@@ -1460,6 +1504,10 @@ footer{
         height: 1180px;
     }
 
+
+    .salesPanel .cardholder img{
+        opacity: 100%;
+    }
     .salesPanel .cardholder{
         justify-content: center;
         gap: 20px;
@@ -1479,6 +1527,11 @@ footer{
         width: 100%;
     }
 
+    
+    .autoBox .autoholder img{
+        opacity: 100%;
+    }
+
 
     .Contact{
         margin-top: 120px;
@@ -1488,10 +1541,19 @@ footer{
 
     .contact-container .contact-left-title h1{
         font-size: 40px;
+        margin-bottom: 25px;
     }
 
     .Contact .contact-container h3{
         font-size: 20px;
+        width: 100%;
+        color: var(--white);
+        font-family: var(--body);
+        margin: 0;
+        padding-top: 0;
+        padding: 10px;
+        border-radius: 50px;
+        background-color: var(--red);
         
     }
    
